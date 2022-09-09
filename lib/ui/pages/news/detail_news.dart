@@ -3,6 +3,8 @@ import 'package:sipp_man/shared/theme.dart';
 import 'package:sipp_man/ui/widget/banner_ads.dart';
 import 'package:sipp_man/ui/widget/line_divider.dart';
 
+import '../../widget/custom_icon_button.dart';
+
 class DetailNews extends StatelessWidget {
   const DetailNews({Key? key}) : super(key: key);
 
@@ -138,10 +140,10 @@ class DetailNews extends StatelessWidget {
     Widget iconBack() {
       return Padding(
         padding: EdgeInsets.only(top: 45, left: defaultRadius),
-        child: Image.asset(
-          'assets/icon_arrow_short_right.png',
-          width: 30,
-          height: 30,
+        child: CustomIconButton(
+          onTap: () => Navigator.pop(context),
+          icon: 'assets/icon_arrow_short_right.png',
+          size: 30,
         ),
       );
     }

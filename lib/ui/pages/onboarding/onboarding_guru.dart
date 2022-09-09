@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sipp_man/shared/theme.dart';
 
+import '../../widget/custom_icon_button.dart';
+
 class OnboardingGuru extends StatelessWidget {
   const OnboardingGuru({Key? key}) : super(key: key);
 
@@ -51,13 +53,10 @@ class OnboardingGuru extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  InkWell(
+                  CustomIconButton(
                     onTap: () => Navigator.pushNamed(context, '/login'),
-                    child: Image.asset(
-                      'assets/icon_arrow.png',
-                      width: 50,
-                      height: 50,
-                    ),
+                    icon: 'assets/icon_arrow.png',
+                    size: 50,
                   )
                 ],
               ),

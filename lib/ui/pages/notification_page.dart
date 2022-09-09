@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sipp_man/ui/widget/banner_ads.dart';
+import 'package:sipp_man/ui/widget/custom_icon_button.dart';
 import 'package:sipp_man/ui/widget/notification_card.dart';
 
 import '../../shared/theme.dart';
@@ -19,10 +20,10 @@ class NotificationPage extends StatelessWidget {
             padding: EdgeInsets.only(
               right: defaultRadius,
             ),
-            child: Image.asset(
-              'assets/icon_arrow_left.png',
-              width: defaultMargin,
-              height: defaultMargin,
+            child: CustomIconButton(
+              onTap: () => Navigator.pop(context),
+              icon: 'assets/icon_arrow_left.png',
+              size: defaultMargin,
             ),
           )
         ],

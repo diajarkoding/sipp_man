@@ -5,6 +5,8 @@ import 'package:sipp_man/shared/theme.dart';
 import 'package:sipp_man/ui/widget/report_card.dart';
 import 'package:sipp_man/ui/widget/line_divider.dart';
 
+import '../widget/custom_icon_button.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -241,29 +243,23 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      InkWell(
-                        onTap: () =>
-                            Navigator.pushNamed(context, '/notif-page'),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            right: 27,
-                          ),
-                          child: Image.asset(
-                            'assets/icon_bell.png',
-                            width: 24,
-                            height: 24,
-                            color: const Color(0xffF2F2F2),
-                          ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          right: 27,
                         ),
-                      ),
-                      InkWell(
-                        onTap: () => Navigator.pushNamed(context, '/chat-page'),
-                        child: Image.asset(
-                          'assets/icon_chat.png',
-                          width: 24,
-                          height: 24,
+                        child: CustomIconButton(
+                          onTap: () =>
+                              Navigator.pushNamed(context, '/notif-page'),
+                          icon: 'assets/icon_bell.png',
+                          size: defaultMargin,
                           color: const Color(0xffF2F2F2),
                         ),
+                      ),
+                      CustomIconButton(
+                        onTap: () => Navigator.pushNamed(context, '/chat-page'),
+                        icon: 'assets/icon_chat.png',
+                        size: defaultMargin,
+                        color: const Color(0xffF2F2F2),
                       ),
                     ],
                   ),

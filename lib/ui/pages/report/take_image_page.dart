@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../shared/theme.dart';
+import '../../widget/custom_icon_button.dart';
 
 class TakeImagePage extends StatelessWidget {
   const TakeImagePage({Key? key}) : super(key: key);
@@ -16,10 +17,10 @@ class TakeImagePage extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(
-              'assets/icon_arrow_left.png',
-              width: 24,
-              height: 24,
+            CustomIconButton(
+              onTap: () => Navigator.pop(context),
+              icon: 'assets/icon_arrow_left.png',
+              size: defaultMargin,
             ),
             Text(
               'Ambil Foto',
@@ -28,11 +29,11 @@ class TakeImagePage extends StatelessWidget {
                 fontWeight: bold,
               ),
             ),
-            Image.asset(
-              'assets/icon_arrow_right.png',
-              width: 24,
-              height: 24,
-            )
+            CustomIconButton(
+              onTap: () => Navigator.pop(context),
+              icon: 'assets/icon_arrow_right.png',
+              size: defaultMargin,
+            ),
           ],
         ),
       );

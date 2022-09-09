@@ -3,6 +3,7 @@ import 'package:sipp_man/ui/widget/banner_ads.dart';
 import 'package:sipp_man/ui/widget/chat_tile.dart';
 
 import '../../../shared/theme.dart';
+import '../../widget/custom_icon_button.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -19,10 +20,10 @@ class ChatPage extends StatelessWidget {
             padding: EdgeInsets.only(
               right: defaultRadius,
             ),
-            child: Image.asset(
-              'assets/icon_arrow_left.png',
-              width: defaultMargin,
-              height: defaultMargin,
+            child: CustomIconButton(
+              onTap: () => Navigator.pop(context),
+              icon: 'assets/icon_arrow_left.png',
+              size: defaultMargin,
             ),
           )
         ],

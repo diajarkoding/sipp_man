@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sipp_man/shared/theme.dart';
+import 'package:sipp_man/ui/widget/custom_icon_button.dart';
 
 class ReportPage extends StatelessWidget {
   final bool isAddImage;
@@ -20,10 +21,12 @@ class ReportPage extends StatelessWidget {
             padding: const EdgeInsets.only(
               right: 20,
             ),
-            child: Image.asset(
-              'assets/icon_arrow_left.png',
-              width: 24,
-              height: 24,
+            child: CustomIconButton(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              icon: 'assets/icon_arrow_left.png',
+              size: defaultMargin,
             ),
           )
         ],

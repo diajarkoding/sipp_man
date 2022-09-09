@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sipp_man/ui/widget/chat_bubble.dart';
 
 import '../../../shared/theme.dart';
+import '../../widget/custom_icon_button.dart';
 
 class DetailChat extends StatelessWidget {
   const DetailChat({Key? key}) : super(key: key);
@@ -18,10 +19,10 @@ class DetailChat extends StatelessWidget {
             padding: EdgeInsets.only(
               right: defaultRadius,
             ),
-            child: Image.asset(
-              'assets/icon_arrow_left.png',
-              width: defaultMargin,
-              height: defaultMargin,
+            child: CustomIconButton(
+              onTap: () => Navigator.pop(context),
+              icon: 'assets/icon_arrow_left.png',
+              size: defaultMargin,
             ),
           )
         ],
